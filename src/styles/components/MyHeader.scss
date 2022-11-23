@@ -1,0 +1,31 @@
+.MyHeader {
+    ul {
+        list-style-type: none;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        li {
+            display: inline;
+            margin: 15px;
+
+            div {
+                font-family: "Helvetica Neue";
+                font-size: 13pt;
+
+                cursor: pointer;
+
+                .Dot {
+                    cursor: default;
+                    background: white;
+
+                    width:12px;
+                    height:12px;
+                    border-radius:50%;
+                    border: 1px solid white;
+                }
+            }
+        }
+    }
+}
