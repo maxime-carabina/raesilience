@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Helvetica Light";
-  src: url("Helvetica-Light/HelveticaLt.ttf") format("opentype");
+  src: local("Helvetica Light"), url("/fonts/Helvetica-Light/HelveticaLt.ttf") format("truetype");
   font-style: light;
   font-weight: lighter;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("Helvetica-Light/HelveticaNeue-Medium.ttf") format("opentype");
+  src: local("Helvetica Neue"), url("/fonts/Helvetica-Neue/HelveticaNeue-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

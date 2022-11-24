@@ -6,20 +6,29 @@ const FONTS = [
     rel: "preload",
     href: "/fonts/Helvetica-Light/HelveticaLt.ttf",
     as: "font",
-    crossOrigin: ""
+    type: "font/ttf",
+    crossOrigin: "",
   },
   {
     key: "font2",
     rel: "preload",
-    href: "/fonts/Helvetica-Neue/HelveticaNeue-Medium.ttf",
+    href: "/fonts/Helvetica-Neue/HelveticaNeue-Medium.otf",
     as: "font",
-    crossOrigin: ""
-  }
+    type: "font/otf",
+    crossOrigin: "",
+  },
 ];
 
 function renderFonts(): JSX.Element[] {
   return FONTS.map((font) => (
-    <link key={font.key} rel={font.rel} href={font.href} as={font.as} crossOrigin={font.crossOrigin} />
+    <link
+      rel={font.rel}
+      key={font.key}
+      href={font.href}
+      as={font.as}
+      type={font.type}
+      crossOrigin={font.crossOrigin}
+    />
   ));
 }
 
@@ -28,7 +37,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="/fonts/style.scss" rel="stylesheet" />
+          <link rel="stylesheet" href="/style.scss" as="style" />
           {renderFonts()}
         </Head>
         <body>

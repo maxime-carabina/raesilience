@@ -8,19 +8,16 @@ function MyHeader() {
       <div className="MyHeader">
         <ul>
           <li>
-            <div>PROJECT</div>
+            <a href="#">PROJECT</a>
           </li>
           <li>
-            <div>A PROPOS</div>
+            <a href="#">A PROPOS</a>
           </li>
           <li>
-            <div>CONTACT</div>
+            <a href="#">CONTACT</a>
           </li>
           <li>
-            <div>BOUTIQUE</div>
-          </li>
-          <li>
-            <div><div className="Dot"></div></div>
+            <a href="#">BOUTIQUE</a>
           </li>
         </ul>
       </div>
@@ -28,3 +25,8 @@ function MyHeader() {
 }
 
 export default MyHeader;
+
+
+{/* <li>
+  <a className="dot"></a>
+</li>; */}
