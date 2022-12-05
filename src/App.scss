@@ -1,0 +1,41 @@
+.App {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+
+  .Hero-banner {
+    //background-image: url("./assets/charlet.png");
+    background-color: red;
+
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .left {
+        h3 {
+          text-transform: uppercase;
+          font-family: 'Helvetica-Light';
+          font-style: normal;
+          font-weight: 100;
+          font-size: 12pt;
+        }
+
+        h1 {
+          text-transform: uppercase;
+          font-family: 'Helvetica 65 Medium';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 30pt;
+
+          width: 100%;
+          max-width: 540px;
+        }
+      }
+
+      .right {
+
+      }
+    }
+  }
+}
