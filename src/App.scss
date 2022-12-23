@@ -4,18 +4,47 @@
   max-width: 1920px;
 
   .Hero-banner {
-    //background-image: url("./assets/charlet.png");
-    background-color: red;
+    padding-top: 10vh;
+    width: 100%;
 
-    .container {
+    .center-album {
+      position: relative;
+
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
 
+      img {
+        // Taille optimal de l'image en vw = width: 35vw;
+        width: 100%;
+        max-width: 680px;
+      }
+    }
+
+    .centered-axis-xy {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .container {
+      position: absolute;
+      z-index: 1;
+
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 45rem;
+
       .left {
+        //visibility: hidden;
+
         h3 {
           text-transform: uppercase;
-          font-family: 'Helvetica-Light';
+          font-family: 'Helvetica-Light', sans-serif;
           font-style: normal;
           font-weight: 100;
           font-size: 12pt;
@@ -34,7 +63,26 @@
       }
 
       .right {
+      }
+    }
 
+    .container-info-scroll {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 30vw;
+
+      //padding-top: 7vh;
+      padding-top: 4rem;
+
+      h4 {
+        font-family: 'HelveticaLt', sans-serif;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 15pt;
+
+        // Voir avec Nico s'il faut réduire l'opacité pour un côté plus réaliste
+        //opacity: .6;
       }
     }
   }
