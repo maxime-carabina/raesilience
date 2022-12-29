@@ -11,9 +11,16 @@ function App() {
     const topic = document.getElementById('topic');
 
     if (topic) {
-      window.scrollY < 20
-        ? (topic.style.visibility = 'hidden')
-        : (topic.style.visibility = 'visible');
+      // window.scrollY < 20
+      //   ? (topic.style.visibility = 'hidden')
+      //   : (topic.style.visibility = 'visible');
+      if (window.scrollY < 10) {
+        topic.style.visibility = 'hidden';
+        topic.classList.remove('lineUp');
+      } else {
+        topic.style.visibility = 'visible';
+        topic.classList.add('lineUp');
+      }
     }
   });
 
@@ -36,7 +43,10 @@ function App() {
         </div>
         <div className="container-info-scroll">
           <h4>SCROLL</h4>
-          <h4>2022</h4>
+          <div className="container-date">
+            <h4>{'//'}</h4>
+            <h4>2022</h4>
+          </div>
         </div>
       </div>
     </div>
