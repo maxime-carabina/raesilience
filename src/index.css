@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  padding: 24px;
+  /* padding: 24px; */
 
   font-family: 'HelveticaLt', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: black;
+  /* background-color: black; */
   color: white;
 }
 
@@ -19,7 +19,7 @@ code {
   font-family: 'HelveticaLt';
   src: local('HelveticaLt'), url('./assets/fonts/HelveticaLt.ttf') format('truetype');
   font-style: normal;
-  font-weight: 100;
+  /* font-weight: 100; */
 }
 
 @font-face {
@@ -27,4 +27,18 @@ code {
   src: local('HelveticaNeue Medium'), url('./assets/fonts/HelveticaNeue-Medium.otf') format("opentype");
   font-style: normal;
   font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold-Font';
+  src: local('Helvetica-Bold-Font'), url('./assets/fonts/Helvetica-Bold-Font.ttf') format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: local('MyriadPro-Regular'), url('./assets/fonts/MyriadPro-Regular.otf') format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }

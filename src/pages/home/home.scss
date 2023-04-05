@@ -1,0 +1,395 @@
+.Home {
+  .Hero-banner {
+    padding-top: 10vh;
+    width: 100%;
+
+    .center-album {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        // Taille optimal de l'image en vw = width: 35vw;
+        width: 100%;
+        max-width: 430px;
+      }
+    }
+
+    .centered-axis-xy {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .container {
+      position: absolute;
+      z-index: 1;
+
+      width: 100%;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .lineUp {
+        animation: 3s anim-lineUp ease-out;
+      }
+
+      @keyframes anim-lineUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50%);
+        }
+        20% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+
+      .left {
+        // Décommenter cette variable pour remettre l'annimation au scroll
+        // visibility: hidden;
+        padding-right: 2rem;
+
+        h3 {
+          text-transform: uppercase;
+          font-family: 'Helvetica-Light', sans-serif;
+          font-style: normal;
+          font-weight: 100;
+          font-size: 10pt;
+        }
+
+        h1 {
+          text-transform: uppercase;
+          font-family: 'HelveticaNeue Medium', sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25pt;
+
+          width: 100%;
+          max-width: 470px;
+        }
+      }
+
+      .right {
+        padding-right: 5rem;
+
+        img {
+          width: 100%;
+          max-width: 180px;
+        }
+      }
+    }
+
+    .container-info-scroll {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 25vw;
+
+      padding-top: 17vh;
+      // padding-top: 7rem;
+      padding-right: 24px;
+      padding-bottom: 24px;
+
+      h4 {
+        margin: 0;
+
+        font-family: 'HelveticaLt', sans-serif;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 13pt;
+
+        // Voir avec Nico s'il faut réduire l'opacité pour un côté plus réaliste
+        opacity: .8;
+      }
+
+      .container-date {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+    }
+  }
+
+  .projects-overview {
+    margin: 0;
+    padding: 10rem 24px;
+
+    background-color: white;
+    color: black;
+
+    .project {
+      display: flex;
+      justify-content: space-between;
+
+      .project-info {
+        width: 50%;
+
+        div {
+          width: 33vw;
+
+          h1 {
+            font-family: 'HelveticaNeue Medium', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 55px;
+            text-transform: uppercase;
+
+            width: 30vw;
+            margin: 0;
+          }
+
+          p {
+            font-family: 'HelveticaNeue Medium', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 25px;
+
+            margin: 0 auto;
+            width: 12vw;
+
+            span {
+              color: #4d4d4d !important;
+            }
+          }
+        }
+      }
+
+      .project-img {
+        width: 50%;
+
+        div {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .coming-soon {
+    margin: 0;
+    padding: 24px;
+    // overflow-x: hidden;
+
+    background-color: black;
+
+    .coming-soon__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h1 {
+        font-family: 'HelveticaNeue Medium', sans-serif;
+        font-weight: normal;
+        font-size: 4rem;
+        font-style: normal;
+        text-transform: uppercase;
+
+        margin: 0;
+      }
+    }
+
+    .spinning__title {
+      margin-top: 4rem;
+      overflow: hidden;
+      display: block;
+
+      .title {
+        font-family: 'HelveticaNeue Medium', sans-serif;
+        font-size: 19rem;
+        line-height: 16rem;
+        letter-spacing: 40px;
+        text-transform: uppercase;
+        color: #f7931e;
+
+        display: block;
+        white-space: nowrap;
+
+        span {
+          display: inline-block;
+          text-align: center;
+          white-space: nowrap;
+          animation: slideLeft 20s infinite linear;
+        }
+      }
+
+      .description {
+        margin: 0 50%;
+        width: 50%;
+
+        font-family: 'HelveticaLt', sans-serif;
+        font-weight: 100;
+        font-size: 15px;
+
+        text-transform: uppercase;
+        text-align: justify;
+      }
+    }
+
+    .categories {
+      margin-top: 12rem;
+
+      .categories__title {
+        margin: 0;
+
+        font-family: 'HelveticaNeue Medium', sans-serif;
+        font-size: 1rem;
+        letter-spacing: 15px;
+
+        text-transform: uppercase;
+      }
+
+      .categories-container {
+        ul {
+          padding: 0;
+          margin: 0;
+
+          list-style-type: none;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          li {
+            a {
+              font-family: 'HelveticaNeue Medium';
+              font-size: 4rem;
+
+              text-decoration: none;
+              text-transform: uppercase;
+
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .contact-footer {
+    padding: 24px;
+
+    background-color: white;
+    color: black;
+
+    .contact-header {
+      ul {
+        padding: 0;
+        margin: 0;
+
+        list-style-type: none;
+        display: flex;
+        align-items: flex-start;
+        gap: 23.5rem;
+
+        li {
+          .raesilience-logo-black {
+            width: 40px;
+            height: 38px;
+          }
+
+          p {
+            margin: 0;
+
+            font-family: 'HelveticaLt', sans-serif;
+            font-weight: 100;
+            font-size: 15px;
+
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .contact-email {
+      margin: 10rem 0 0 0;
+
+      font-family: 'HelveticaNeue Medium';
+      font-weight: 500;
+      font-size: 6rem;
+      line-height: 5.5rem;
+
+      text-transform: uppercase;
+    }
+
+    .social-media-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6rem;
+
+      margin-right: 14rem;
+      margin-top: 4rem;
+      // margin-bottom: 9rem;
+
+      .social-media__links {
+        ul {
+          padding: 0;
+          margin: 0;
+
+          list-style-type: none;
+
+          li {
+            margin-bottom: 10px;
+
+            a {
+              color: black;
+
+              font-family: 'HelveticaNeue Medium';
+              font-weight: 500;
+              font-size: 1rem;
+
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      .social-media__description {
+        font-family: 'HelveticaLt', sans-serif;
+        font-weight: 100;
+        font-size: 15px;
+        text-align: justify;
+
+        width: 270px;
+      }
+    }
+
+    .jobs {
+      font-family: 'HelveticaLt', sans-serif;
+      font-weight: 100;
+      font-size: 15px;
+      padding-top: 9rem;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

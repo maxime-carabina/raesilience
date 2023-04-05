@@ -1,0 +1,59 @@
+.Footer {
+  background-color: black;
+  padding: 24px;
+
+  .Footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40vw;
+
+    .pages,
+    .socials {
+      ul {
+        padding: 0;
+        margin: 0;
+
+        list-style-type: none;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+
+          a {
+            color: "#E6E6E6";
+
+            font-family: 'HelveticaLt', sans-serif;
+            font-weight: 100;
+            font-size: 13pt;
+            line-height: 25px;
+
+            text-align: center;
+            text-decoration: none;
+
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .Mention-Légales {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18vw;
+
+    margin-top: 8rem;
+
+    p {
+      font-family: 'HelveticaLt', sans-serif;
+      font-weight: 100;
+      font-size: 11pt;
+      color: "#E6E6E6";
+
+      width: fit-content;
+      margin: 0;
+    }
+  }
+}
