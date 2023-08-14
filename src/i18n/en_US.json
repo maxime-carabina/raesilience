@@ -1,0 +1,12 @@
+{
+  "errors": {
+    "unexpected-error": {
+      "title": "OOps!",
+      "description": "An unexpected error has occurred",
+      "link": "Go back to the main page!"
+    },
+    "not-found": {
+      "title": "Not found!"
+    }
+  }
+}
