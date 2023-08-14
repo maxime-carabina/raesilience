@@ -1,0 +1,12 @@
+{
+  "errors": {
+    "unexpected-error": {
+      "title": "OOps !",
+      "description": "Une erreur inconnue est apparue.",
+      "link": "Revenir sur la page principal !"
+    },
+    "not-found": {
+      "title": "Page introuvables !"
+    }
+  }
+}
