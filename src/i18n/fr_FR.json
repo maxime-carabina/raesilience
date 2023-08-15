@@ -1,4 +1,16 @@
 {
+  "pages-link": {
+    "projects": "projets",
+    "about": "a-propos",
+    "contact": "contact",
+    "shop": "boutique"
+  },
+  "header": {
+    "projects": "Projets",
+    "about": "A propos",
+    "contact": "Contact",
+    "shop": "Boutique"
+  },
   "errors": {
     "unexpected-error": {
       "title": "OOps !",
