@@ -1,5 +1,3 @@
-// STYLES
-
 // EXTERNALS
 import dot from 'dot-object';
 
@@ -34,10 +32,10 @@ class I18n {
     const fromUrl = urlParams.get('l');
 
     if (fromUrl) {
-      localStorage.setItem('massa-bridge-lang', fromUrl);
+      localStorage.setItem('raesilience-lang', fromUrl);
     }
 
-    return fromUrl || localStorage.getItem('massa-bridge-lang') || INTL.EN_us;
+    return fromUrl || localStorage.getItem('raesilience-lang') || INTL.FR_fr;
   }
 
   private _getCopy(): Copy {

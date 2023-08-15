@@ -13,13 +13,13 @@ export interface ConfigStoreState {
 
 const configStore = persist<ConfigStoreState>(
   (set) => ({
-    lang: 'en_FR',
+    lang: 'fr_FR',
     theme: 'theme-dark',
 
     setLang: (lang: string) => set({ lang }),
     setTheme: (theme: string) => set({ theme }),
 
-    dropLang: () => set({ lang: 'en_FR' }),
+    dropLang: () => set({ lang: 'fr_FR' }),
     dropTheme: () => set({ theme: 'theme-dark' }),
   }),
   {

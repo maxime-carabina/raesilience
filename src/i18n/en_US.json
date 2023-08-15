@@ -1,4 +1,16 @@
 {
+  "pages-link": {
+    "projects": "projects",
+    "about": "about",
+    "contact": "contact",
+    "shop": "shop"
+  },
+  "header": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "shop": "Shop"
+  },
   "errors": {
     "unexpected-error": {
       "title": "OOps!",
