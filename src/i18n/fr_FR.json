@@ -16,6 +16,33 @@
       "title": "Je réalise des projets de direction artistique, design & photographie",
       "description": "DA indépendant situé à Paris",
       "button": "En savoir plus"
+    },
+    "projects-overview": {
+      "cordes-sensibles": {
+        "title": "Cordes sen-sibles //",
+        "description": "Cover Ep // Charlet",
+        "profession": "Design+"
+      },
+      "au-gre-du-temps": {
+        "title": "Au gré du temps //",
+        "description": "Au Gré Du Temps",
+        "profession": "Photographie"
+      },
+      "stay-noir": {
+        "title": "Stay Noir //",
+        "description": "Streetwear",
+        "profession": "Da"
+      }
+    },
+    "stay-noir-links": {
+      "clothing": "Vêtements",
+      "streetwear": "Streetwear",
+      "soon": "Bientôt",
+      "available": "Dispo-"
+    },
+    "coming-soon": {
+      "title": "Regarder tous les projets",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut"
     }
   },
   "errors": {
