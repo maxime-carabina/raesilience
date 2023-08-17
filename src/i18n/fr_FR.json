@@ -11,6 +11,13 @@
     "contact": "Contact",
     "shop": "Boutique"
   },
+  "index": {
+    "hero-banner": {
+      "title": "Je réalise des projets de direction artistique, design & photographie",
+      "description": "DA indépendant situé à Paris",
+      "button": "En savoir plus"
+    }
+  },
   "errors": {
     "unexpected-error": {
       "title": "OOps !",
