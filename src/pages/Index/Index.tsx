@@ -11,11 +11,15 @@ const PROJECTS = [
   {
     info: (
       <div className="sticky top-0">
-        <h1 className="rae-big-banner uppercase">Cordes sen-sibles //</h1>
+        <h1 className="rae-big-banner uppercase">
+          {Intl.t('index.projects-overview.cordes-sensibles.title')}
+        </h1>
         <p className="rae-body uppercase">
-          Cover Ep // Charlet
+          {Intl.t('index.projects-overview.cordes-sensibles.description')}
           <br />
-          <span className="text-f-tertiary"> Design+</span>
+          <span className="text-f-tertiary">
+            {Intl.t('index.projects-overview.cordes-sensibles.profession')}
+          </span>
         </p>
       </div>
     ),
@@ -24,11 +28,15 @@ const PROJECTS = [
   {
     info: (
       <div className="sticky top-0">
-        <h1 className="rae-big-banner uppercase">Au Gré Du Temps //</h1>
+        <h1 className="rae-big-banner uppercase">
+          {Intl.t('index.projects-overview.au-gre-du-temps.title')}
+        </h1>
         <p className="rae-body uppercase">
-          Au Gré Du Temps
+          {Intl.t('index.projects-overview.au-gre-du-temps.description')}
           <br />
-          <span className="text-f-tertiary">Photographie</span>
+          <span className="text-f-tertiary">
+            {Intl.t('index.projects-overview.au-gre-du-temps.profession')}
+          </span>
         </p>
       </div>
     ),
@@ -37,15 +45,38 @@ const PROJECTS = [
   {
     info: (
       <div className="sticky top-0">
-        <h1 className="rae-big-banner uppercase">Stay Noir //</h1>
+        <h1 className="rae-big-banner uppercase">
+          {Intl.t('index.projects-overview.stay-noir.title')}
+        </h1>
         <p className="rae-body uppercase">
-          Streetwear
+          {Intl.t('index.projects-overview.stay-noir.description')}
           <br />
-          <span className="text-f-tertiary">Da</span>
+          <span className="text-f-tertiary">
+            {Intl.t('index.projects-overview.stay-noir.profession')}
+          </span>
         </p>
       </div>
     ),
     image: <TshirtStayNoir className="w-full h-auto" />,
+  },
+];
+
+const STAYNOIR_LINKS = [
+  {
+    title: Intl.t('index.stay-noir-links.clothing'),
+    link: '',
+  },
+  {
+    title: Intl.t('index.stay-noir-links.streetwear'),
+    link: '',
+  },
+  {
+    title: Intl.t('index.stay-noir-links.soon'),
+    link: '',
+  },
+  {
+    title: Intl.t('index.stay-noir-links.available'),
+    link: '',
   },
 ];
 
@@ -91,6 +122,42 @@ export function Index() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="p-6">
+        <div className="mb-16 flex items-center justify-between">
+          <h1 className="rae-title uppercase">
+            {Intl.t('index.coming-soon.title')}
+          </h1>
+          <h1 className="rae-title uppercase">{'//'} 2022</h1>
+        </div>
+        <div className="block overflow-hidden uppercase">
+          <div
+            className={`block rae-banner text-f-tertiary text-[304px]
+            tracking-[40px] whitespace-nowrap`}
+          >
+            <span className="inline-block text-center whitespace-nowrap animate-infinite-loop">
+              RÆsilience-
+            </span>
+            <span className="inline-block text-center whitespace-nowrap animate-infinite-loop">
+              RÆsilience-
+            </span>
+          </div>
+        </div>
+        <div className="mb-28	flex items-center justify-end">
+          <p className="rae-body text-justify w-1/2 uppercase">
+            {Intl.t('index.coming-soon.description')}
+          </p>
+        </div>
+        <h1 className="rae-title uppercase">StayNoir</h1>
+
+        <ul className="list-none flex items-center justify-between">
+          {STAYNOIR_LINKS.map((link, idx) => (
+            <li key={idx}>
+              <a className="text-6xl rae-body uppercase">{link.title}</a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

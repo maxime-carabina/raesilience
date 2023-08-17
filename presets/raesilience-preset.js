@@ -19,6 +19,17 @@ module.exports = {
       HelveticaBold: ['HelveticaBold', 'sans-serif'],
       MyriadProRegular: ['MyriadProRegular', 'sans-serif'],
     },
+    extend: {
+      keyframes: {
+        loop: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'infinite-loop': 'loop 15s linear infinite',
+      },
+    },
   },
   plugins: [
     createThemes({
