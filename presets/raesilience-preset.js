@@ -45,14 +45,20 @@ module.exports = {
     }),
     plugin(function ({ addComponents, theme }) {
       addComponents({
-        '.rae-banner': {
+        '.rae-big-banner': {
           fontSize: '64px',
           fontWeight: '500',
           fontFamily: theme('fontFamily.HelveticaNeueMd'),
           fontStyle: 'normal',
         },
-        '.rae-title': {
+        '.rae-banner': {
           fontSize: '33px',
+          fontWeight: '500',
+          fontFamily: theme('fontFamily.HelveticaNeueMd'),
+          fontStyle: 'normal',
+        },
+        '.rae-title': {
+          fontSize: '28px',
           fontWeight: '500',
           fontFamily: theme('fontFamily.HelveticaNeueMd'),
         },
@@ -63,15 +69,15 @@ module.exports = {
         },
         '.rae-h3': {
           fontSize: '16px',
-          fontWeight: '500',
+          fontWeight: '100',
           fontFamily: theme('fontFamily.HelveticaLt'),
         },
-        '.mas-buttons': {
+        '.rae-buttons': {
           fontSize: '16px',
           fontWeight: '600',
           fontFamily: theme('fontFamily.HelveticaLt'),
         },
-        '.mas-body': {
+        '.rae-body': {
           fontSize: '16px',
           fontWeight: '500',
           fontFamily: theme('fontFamily.HelveticaNeueMd'),

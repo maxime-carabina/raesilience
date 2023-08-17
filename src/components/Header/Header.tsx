@@ -30,7 +30,7 @@ export function Header(props: HeaderProps) {
   const { theme } = props;
 
   return (
-    <header className="p-6 flex justify-between items-center text-f-primary">
+    <header className="absolute top-0 left-0 w-full p-6 flex justify-between items-center text-f-primary">
       <Link to="/">
         <RaesilienceLogo theme={theme} className="w-14 h-14" />
       </Link>
