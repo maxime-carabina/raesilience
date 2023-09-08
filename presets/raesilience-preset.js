@@ -95,6 +95,13 @@ module.exports = {
           lineHeight: '24px',
           fontStyle: 'normal',
         },
+        '.rae-body2': {
+          fontSize: '16px',
+          fontWeight: '100',
+          fontFamily: theme('fontFamily.helveticaLt'),
+          lineHeight: '24px',
+          fontStyle: 'normal',
+        },
       });
     }),
   ],

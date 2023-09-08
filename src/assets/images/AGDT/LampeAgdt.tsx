@@ -1,9 +1,16 @@
 import LampeAGDTImg from './lampe-AGDT.jpg';
 
-export function LampeAgdt({ ...props }) {
+interface LampeAgdtProps {
+  customClass?: string;
+  customClassImg?: string;
+}
+
+export function LampeAgdt(props: LampeAgdtProps) {
+  const { customClass, customClassImg } = props;
+
   return (
-    <div {...props}>
-      <img src={LampeAGDTImg} alt="lampe-AGDT" />
+    <div className={customClass}>
+      <img className={customClassImg} src={LampeAGDTImg} alt="lampe-AGDT" />
     </div>
   );
 }
