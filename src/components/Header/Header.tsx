@@ -41,7 +41,7 @@ export function Header(props: HeaderProps) {
           </li>
         ))}
         <li>
-          <div className="rounded-full bg-secondary w-4 h-4" />
+          <div className="mb-1 rounded-full bg-secondary w-4 h-4" />
         </li>
       </ul>
     </header>

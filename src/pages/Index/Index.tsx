@@ -1,65 +1,9 @@
-import {
-  CoverCordesSensibles,
-  RaesilienceLogo,
-  LampeAgdt,
-  TshirtStayNoir,
-} from '@/assets';
+import { Link } from 'react-router-dom';
+
+import { PROJECTS } from './Projects/Projects';
+import { RaesilienceLogo } from '@/assets';
 import Intl from '@/i18n/i18n';
 import { useConfigStore } from '@/store/store';
-
-const PROJECTS = [
-  {
-    info: (
-      <div className="sticky top-0">
-        <h1 className="rae-big-banner uppercase">
-          {Intl.t('index.projects-overview.cordes-sensibles.title')}
-        </h1>
-        <p className="rae-body uppercase">
-          {Intl.t('index.projects-overview.cordes-sensibles.description')}
-          <br />
-          <span className="text-f-tertiary">
-            {Intl.t('index.projects-overview.cordes-sensibles.profession')}
-          </span>
-        </p>
-      </div>
-    ),
-    image: <CoverCordesSensibles className="w-full h-auto" />,
-  },
-  {
-    info: (
-      <div className="sticky top-0">
-        <h1 className="rae-big-banner uppercase">
-          {Intl.t('index.projects-overview.au-gre-du-temps.title')}
-        </h1>
-        <p className="rae-body uppercase">
-          {Intl.t('index.projects-overview.au-gre-du-temps.description')}
-          <br />
-          <span className="text-f-tertiary">
-            {Intl.t('index.projects-overview.au-gre-du-temps.profession')}
-          </span>
-        </p>
-      </div>
-    ),
-    image: <LampeAgdt className="w-full h-auto" />,
-  },
-  {
-    info: (
-      <div className="sticky top-0">
-        <h1 className="rae-big-banner uppercase">
-          {Intl.t('index.projects-overview.stay-noir.title')}
-        </h1>
-        <p className="rae-body uppercase">
-          {Intl.t('index.projects-overview.stay-noir.description')}
-          <br />
-          <span className="text-f-tertiary">
-            {Intl.t('index.projects-overview.stay-noir.profession')}
-          </span>
-        </p>
-      </div>
-    ),
-    image: <TshirtStayNoir className="w-full h-auto" />,
-  },
-];
 
 const STAYNOIR_LINKS = [
   {
@@ -80,8 +24,29 @@ const STAYNOIR_LINKS = [
   },
 ];
 
+const SOCIAL_MEDIA_LINKS = [
+  {
+    title: 'Instagram',
+    link: 'https://www.instagram.com/rae.stud',
+  },
+  {
+    title: 'Twitter',
+    link: '',
+  },
+  {
+    title: 'Behance',
+    link: '',
+  },
+  {
+    title: 'Linkedin',
+    link: '',
+  },
+];
+
 export function Index() {
   const [theme] = useConfigStore((state) => [state.theme]);
+
+  const isDarkTheme = theme === 'theme-dark';
 
   return (
     <div className="text-f-primary">
@@ -101,7 +66,7 @@ export function Index() {
           <RaesilienceLogo theme={theme} className="w-52" />
           <div
             className={`absolute bottom-2 right-8 cursor-default max-lg:hidden
-              flex justify-end items-center gap-9 text-f-primary/80 rae-h3 uppercase`}
+              flex justify-end items-center gap-96 text-f-primary/80 rae-h3 uppercase`}
           >
             <h3>Scroll</h3>
             <h3>{'//'} 2023</h3>
@@ -112,9 +77,9 @@ export function Index() {
       <div
         className={`${
           theme === 'theme-dark' ? 'theme-light' : 'theme-dark'
-        } bg-primary text-f-primary py-10 px-6`}
+        } bg-primary text-f-primary py-36 px-6`}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {PROJECTS.map((project, idx) => (
             <div key={idx} className="flex">
               <div className="w-1/2">{project.info}</div>
@@ -149,15 +114,58 @@ export function Index() {
             {Intl.t('index.coming-soon.description')}
           </p>
         </div>
-        <h1 className="rae-title uppercase">StayNoir</h1>
+        <p className="mb-2 tracking-[15px] rae-body uppercase">StayNoir</p>
 
-        <ul className="list-none flex items-center justify-between">
+        <ul className="list-none flex flex-wrap items-center justify-between gap-5">
           {STAYNOIR_LINKS.map((link, idx) => (
             <li key={idx}>
-              <a className="text-6xl rae-body uppercase">{link.title}</a>
+              <p className="text-6xl rae-body uppercase">{link.title}</p>
             </li>
           ))}
         </ul>
+      </div>
+
+      <div
+        className={`${
+          isDarkTheme ? 'theme-light' : 'theme-dark'
+        } bg-primary text-f-primary p-6`}
+      >
+        <ul className="mb-40 list-none flex justify-between uppercase">
+          <li>
+            <RaesilienceLogo
+              theme={isDarkTheme ? 'theme-light' : 'theme-dark'}
+              className="w-12"
+            />
+          </li>
+          <li>
+            <h3 className="rae-h3 w-44">{Intl.t('index.contact.question')}</h3>
+          </li>
+          <li>
+            <h3 className="rae-h3 w-28">
+              {Intl.t('index.contact.send-me-a-message')}
+            </h3>
+          </li>
+        </ul>
+        <h1 className="mb-12 rae-banner text-8xl uppercase">
+          raesilience.stud
+          <br />
+          @gmail.com
+        </h1>
+        <div className="flex itmes-center justify-end gap-24 mb-36 mr-28">
+          <ul className="list-none uppercase">
+            {SOCIAL_MEDIA_LINKS.map((link, idx) => (
+              <li key={idx}>
+                <Link to={link.link} className="rae-body">
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="rae-h3 text-justify w-full max-w-xs">
+            {Intl.t('index.contact.description-social-media')}
+          </h3>
+        </div>
+        <p className="rae-body2">{Intl.t('index.contact.profession')}</p>
       </div>
     </div>
   );

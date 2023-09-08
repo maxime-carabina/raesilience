@@ -35,7 +35,7 @@
       }
     },
     "stay-noir-links": {
-      "clothing": "Vêtements",
+      "clothing": "Vetements",
       "streetwear": "Streetwear",
       "soon": "Bientôt",
       "available": "Dispo-"
@@ -43,6 +43,12 @@
     "coming-soon": {
       "title": "Regarder tous les projets",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut"
+    },
+    "contact": {
+      "question": "Envie que l'on travail ensemble ?",
+      "send-me-a-message": "Envoie moi un message",
+      "description-social-media": "Retrouve moi sur les réseaux sociaux, vous pouvez également me contacter par message directement !",
+      "profession": "da - designer - photographe - créateur de contenu"
     }
   },
   "errors": {

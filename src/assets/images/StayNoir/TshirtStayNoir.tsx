@@ -1,9 +1,20 @@
 import TshirtStayNoirImg from './t-shirt-staynoir.jpg';
 
-export function TshirtStayNoir({ ...props }) {
+interface TshirtStayNoirProps {
+  customClass?: string;
+  customClassImg?: string;
+}
+
+export function TshirtStayNoir(props: TshirtStayNoirProps) {
+  const { customClass, customClassImg } = props;
+
   return (
-    <div {...props}>
-      <img src={TshirtStayNoirImg} alt="t-shirt-staynoir" />
+    <div className={customClass}>
+      <img
+        className={customClassImg}
+        src={TshirtStayNoirImg}
+        alt="t-shirt-staynoir"
+      />
     </div>
   );
 }
