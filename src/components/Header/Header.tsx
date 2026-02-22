@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { RaesilienceLogo } from '@/assets/Icons';
 import Intl from '@/i18n/i18n';
@@ -26,11 +26,34 @@ const LINKS = [
   },
 ];
 
+const DIFFERENT_THEME_PAGES = [
+  Intl.t('pages-link.projects'),
+  Intl.t('pages-link.contact'),
+];
+
 export function Header(props: HeaderProps) {
-  const { theme } = props;
+  let { theme } = props;
+
+  const location = useLocation();
+
+  // const projectsPage =
+  //   location.pathname.substring(1) === Intl.t('pages-link.projects');
+
+  // if (projectsPage)
+  //   theme = theme === 'theme-dark' ? 'theme-light' : 'theme-dark';
+
+  //DIFFERENT_THEME_PAGES.find((page) => page === location.pathname.substring(1))
+  const isElementFound = DIFFERENT_THEME_PAGES.find(
+    (page) => page === location.pathname.substring(1),
+  );
+
+  if (isElementFound)
+    theme = theme === 'theme-dark' ? 'theme-light' : 'theme-dark';
 
   return (
-    <header className="absolute top-0 left-0 w-full p-6 flex justify-between items-center text-f-primary">
+    <header
+      className={`${theme} absolute top-0 left-0 w-full p-6 flex justify-between items-center text-f-primary`}
+    >
       <Link to="/">
         <RaesilienceLogo theme={theme} className="w-14 h-14" />
       </Link>

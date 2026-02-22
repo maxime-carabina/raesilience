@@ -12,7 +12,7 @@ export function Base() {
   // Hooks
   const [theme, setThemeStorage] = useLocalStorage<string>(
     'raesilience-theme',
-    'theme-dark',
+    'theme-light',
   );
 
   useEffect(() => {
